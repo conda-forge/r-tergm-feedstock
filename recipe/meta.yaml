@@ -1,4 +1,4 @@
-{% set version = '3.6.0' %}
+{% set version = '3.6.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tergm/tergm_{{ version }}.tar.gz
-  sha256: 4204095e2b0c4859c32005953e8dcb621cf14e5a84b92eda79785ed86defe7cc
+  sha256: 21de2eca943d89ba63af14951655d626f241bafccc4b2709fa39aa130625cd0f
 
 build:
   merge_build_host: True  # [win]
@@ -21,8 +21,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -35,7 +35,7 @@ requirements:
     - r-ergm >=3.10.1
     - r-network >=1.15
     - r-networkdynamic >=0.10.0
-    - r-nlme >=3.1.140
+    - r-nlme >=3.1.139
     - r-robustbase >=0.93.5
     - r-statnet.common >=4.2.0
   run:
@@ -46,7 +46,7 @@ requirements:
     - r-ergm >=3.10.1
     - r-network >=1.15
     - r-networkdynamic >=0.10.0
-    - r-nlme >=3.1.140
+    - r-nlme >=3.1.139
     - r-robustbase >=0.93.5
     - r-statnet.common >=4.2.0
 
@@ -70,14 +70,14 @@ extra:
     - stevierene82
 
 # Package: tergm
-# Version: 3.6.0
-# Date: 2019-05-15
+# Version: 3.6.1
+# Date: 2019-06-12
 # Title: Fit, Simulate and Diagnose Models for Network Evolution Based on Exponential-Family Random Graph Models
 # Authors@R: c( person("Pavel N.", "Krivitsky", role=c("aut","cre"), email="pavel@uow.edu.au", comment=c(ORCID="0000-0002-9101-3362")), person("Mark S.", "Handcock", role=c("aut","ths"), email="handcock@stat.ucla.edu"), person("David R.", "Hunter", role=c("ctb"), email="dhunter@stat.psu.edu"), person("Steven M.", "Goodreau", role=c("ctb","ths"), email="goodreau@u.washington.edu"), person("Martina", "Morris", role=c("ctb","ths"), email="morrism@u.washington.edu"), person("Nicole Bohme", "Carnegie", role=c("ctb"), email="nicole.carnegie@nyu.edu"), person("Carter T.", "Butts", role=c("ctb"), email="buttsc@uci.edu"), person("Ayn", "Leslie-Cook", role=c("ctb"), email="aynlc3@uw.edu"), person("Skye", "Bender-deMoll", role=c("ctb"), email="skyebend@skyeome.net"), person("Li","Wang",role=c("ctb"),email="lxwang@gmail.com"), person("Kirk","Li",role=c("ctb"),email="kirkli@uw.edu"))
 # Depends: ergm (>= 3.10.1), network (>= 1.15), networkDynamic (>= 0.10.0)
-# Imports: robustbase (>= 0.93.5), coda (>= 0.19.2), nlme (>= 3.1.140), MASS (>= 7.3.51.4), statnet.common (>= 4.2.0)
+# Imports: robustbase (>= 0.93.5), coda (>= 0.19.2), nlme (>= 3.1.139), MASS (>= 7.3.51.4), statnet.common (>= 4.2.0)
 # LinkingTo: ergm
-# Suggests: lattice (>= 0.20.38), parallel (>= 3.6.0), rmarkdown (>= 1.12), knitr (>= 1.22)
+# Suggests: lattice (>= 0.20.38), parallel, rmarkdown (>= 1.12), knitr (>= 1.22)
 # BugReports: https://github.com/statnet/tergm/issues
 # Description: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
 # License: GPL-3 + file LICENSE
@@ -87,8 +87,8 @@ extra:
 # Encoding: UTF-8
 # Collate: 'InitConstraint.R' 'InitErgmTerm.duration.R' 'InitMHP.DynMLE.R' 'InitMHP.DynMLE.blockdiag.R' 'InitMHP.DynMoME.R' 'coef.stergm.R' 'combine.networks.R' 'control.logLik.stergm.R' 'control.simulate.stergm.R' 'control.stergm.R' 'ergm.godfather.R' 'gof.stergm.R' 'impute.network.list.R' 'is.lasttoggle.R' 'logLik.stergm.R' 'mcmc.diagnostics.stergm.R' 'print.stergm.R' 'simulate.stergm.R' 'stergm.CMLE.R' 'stergm.EGMME.GD.R' 'stergm.EGMME.R' 'stergm.EGMME.SA.R' 'stergm.EGMME.initialfit.R' 'stergm.R' 'tergm-deprecated.R' 'stergm.getMCMCsample.R' 'stergm.utils.R' 'summary.statistics.networkDynamic.R' 'summary.stergm.R' 'zzz.R'
 # NeedsCompilation: yes
-# Packaged: 2019-05-15 04:45:42 UTC; pavel
+# Packaged: 2019-06-11 22:32:50 UTC; levap
 # Author: Pavel N. Krivitsky [aut, cre] (<https://orcid.org/0000-0002-9101-3362>), Mark S. Handcock [aut, ths], David R. Hunter [ctb], Steven M. Goodreau [ctb, ths], Martina Morris [ctb, ths], Nicole Bohme Carnegie [ctb], Carter T. Butts [ctb], Ayn Leslie-Cook [ctb], Skye Bender-deMoll [ctb], Li Wang [ctb], Kirk Li [ctb]
 # Maintainer: Pavel N. Krivitsky <pavel@uow.edu.au>
 # Repository: CRAN
-# Date/Publication: 2019-05-15 07:43:07 UTC
+# Date/Publication: 2019-06-12 10:10:18 UTC
