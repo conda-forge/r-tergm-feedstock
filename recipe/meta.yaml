@@ -1,4 +1,4 @@
-{% set version = '3.6.1' %}
+{% set version = "3.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tergm/tergm_{{ version }}.tar.gz
-  sha256: 21de2eca943d89ba63af14951655d626f241bafccc4b2709fa39aa130625cd0f
+  sha256: afd2b160bda691127f8fc57c4caff61f688cc03e71e622f8e833b2a26dc635df
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,23 +32,23 @@ requirements:
     - r-base
     - r-mass >=7.3.51.4
     - r-coda >=0.19.2
-    - r-ergm >=3.10.1
+    - r-ergm >=3.11.0
     - r-network >=1.15
     - r-networkdynamic >=0.10.0
     - r-nlme >=3.1.139
     - r-robustbase >=0.93.5
-    - r-statnet.common >=4.2.0
+    - r-statnet.common >=4.4.0
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-mass >=7.3.51.4
     - r-coda >=0.19.2
-    - r-ergm >=3.10.1
+    - r-ergm >=3.11.0
     - r-network >=1.15
     - r-networkdynamic >=0.10.0
     - r-nlme >=3.1.139
     - r-robustbase >=0.93.5
-    - r-statnet.common >=4.2.0
+    - r-statnet.common >=4.4.0
 
 test:
   commands:
@@ -57,12 +57,11 @@ test:
 
 about:
   home: http://www.statnet.org
-  license: GPL-3
-  summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network
-    evolution based on exponential-family random graph models (ERGM). 'tergm' is a part
-    of the 'statnet' suite of packages for network analysis.
+  license: GPL-3.0-only
+  summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
