@@ -1,4 +1,4 @@
-{% set version = "4.0.2" %}
+{% set version = "4.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tergm/tergm_{{ version }}.tar.gz
-  sha256: 5ab1d61166c90f90c77edd12544b5946e01a933cc3e7ca609cae72075b742a64
+  sha256: abff35b48b53a182d9424c78c5240bde1259b695c2328861000193bf88044a50
 
 build:
   merge_build_host: true  # [win]
