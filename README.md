@@ -1,11 +1,22 @@
+About r-tergm-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tergm-feedstock/blob/main/LICENSE.txt)
+
 About r-tergm
-=============
+-------------
 
 Home: http://www.statnet.org
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tergm-feedstock/blob/main/LICENSE.txt)
+Summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
+About r-tergm
+-------------
+
+Home: http://www.statnet.org
+
+Package license: GPL-3.0-only
 
 Summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
 
