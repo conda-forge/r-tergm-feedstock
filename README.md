@@ -11,6 +11,8 @@ Home: http://www.statnet.org
 Package license: GPL-3.0-only
 
 Summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
+
+Development: https://github.com/statnet/tergm
 About r-tergm
 -------------
 
@@ -19,6 +21,8 @@ Home: http://www.statnet.org
 Package license: GPL-3.0-only
 
 Summary: An integrated set of extensions to the 'ergm' package to analyze and simulate network evolution based on exponential-family random graph models (ERGM). 'tergm' is a part of the 'statnet' suite of packages for network analysis.
+
+Development: https://github.com/statnet/tergm
 
 Current build status
 ====================
