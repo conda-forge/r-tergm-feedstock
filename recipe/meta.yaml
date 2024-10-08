@@ -1,4 +1,4 @@
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tergm/tergm_{{ version }}.tar.gz
-  sha256: dcf5a26cc2c4d165766706af08f8ea4f36e328158f5b682490c2a351f7fbda69
+  sha256: 8a1cc04350e6d46bf510558ca47fe51a3b81d26214ecfc2d73ba35d3600e60d7
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
